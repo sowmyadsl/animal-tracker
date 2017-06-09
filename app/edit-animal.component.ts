@@ -2,7 +2,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from './animal.model';
 
 @Component({
-  selector: 'app-edit-animal',
+  selector: 'edit-animal',
+  moduleId: module.id,
   templateUrl: './edit-animal.component.html',
   styleUrls: ['./edit-animal.component.css']
 })

@@ -3,14 +3,14 @@
 </div>
 
 <div class="container">
-  <app-new-animal (newAnimalSender)="addAnimal($event)"></app-new-animal>
+  <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   <div class="row">
     <div class="col-sm-7">
-      <app-animal-list [animalList]="animalList" (editAnimalSender)="editAnimal($event)">
-      </app-animal-list>
+      <animal-list [animals]="animalList" (editAnimalSender)="editAnimal($event)">
+      </animal-list>
     </div>
     <div class="con-sm-5">
-      <app-edit-animal  [selectedAnimal]="selectedAnimal" (finishedEditingSender)="finishedEditing()"></app-edit-animal>
+      <edit-animal  [selectedAnimal]="selectedAnimal" (finishedEditingSender)="finishedEditing()"></edit-animal>
     </div>
   </div>
 </div>
