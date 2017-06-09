@@ -44,4 +44,14 @@ animals: Animal[] = [{
       dislikes: "Loud Noises"
     }
   ];
+
+  selectedAnimal = null;
+
+  editAnimal(animal){
+    this.selectedAnimal = animal;
+  }
+
+  finishedEditing() {
+   this.selectedAnimal = null;
+ }
 }

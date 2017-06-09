@@ -1,0 +1,37 @@
+<!-- New form to add a new animal -->
+
+<h1>New Animal</h1>
+    <div>
+      <br>
+      <label name="new-species">New species </label>
+      <input #newSpecies>
+      <br>
+      <label name="new-image">New image</label>
+      <input #newImage>
+      <br>
+      <label name="new-name">New name</label>
+      <input #newName>
+      <br>
+      <label name="new-age">New age</label>
+      <input #newAge>
+      <br>
+      <label name="new-diet">New diet</label>
+      <input #newDiet>
+      <br>
+      <label name="new-location">New location</label>
+      <input #newLocation>
+      <br>
+      <label name="new-caretakers">New caretakers</label>
+      <input #newCaretakers>
+      <br>
+      <label name="new-sex">New sex</label>
+      <input #newSex>
+      <br>
+      <label name="new-likes">New likes</label>
+      <input #newLikes>
+      <br>
+      <label name="new-dislikes">New dislikes</label>
+      <input #newDislikes>
+      <br>
+      <button (click)="newAnimal(newSpecies.value, newImage.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value)">Add!</button>
+    </div>
