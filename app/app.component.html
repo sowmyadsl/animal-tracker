@@ -1,1 +1,33 @@
-<h1> Animal Tracker </h1>
+<div class="jumbotron">
+  <h1> Animal Tracker </h1>
+</div>
+
+<div class="container">
+  <ul>
+    <li *ngFor="let animal of animals">
+      <h3>{{animal.species}}</h3>
+      <figure>
+        <img src="{{animal.image}}" alt="{{animal.name}}">
+        <figcaption>
+          {{animal.name}}
+        </figcaption>
+        </figure>
+        <div class="animal-info" *ngIf="showInfo">
+          <h4>animal Info:</h4>
+          <p>Name: {{animal.name}}
+          <p>Age: {{animal.age}} years</p>
+          <p>Diet: {{animal.diet}}</p>
+          <p>Location: {{animal.location}}</p>
+          <p>Caretakers: {{animal.caretakers}}</p>
+          <p>Sex: {{animal.sex}}</p>
+          <p>likes: {{animal.likes}}</p>
+          <p>dislikes: {{animal.dislikes}}</p>
+          <hr>
+        </div>
+       </li>
+   </ul>
+</div>
+
+<div class="actions">
+  <button type="button" (click)="showInfo = !showInfo">{{ showInfo ? "Hide Info" : "Show Info"}}</button>
+</div>

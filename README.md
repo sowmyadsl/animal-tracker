@@ -30,6 +30,9 @@ You will need the following things properly installed on your computer.
 
 4. Components:
 
+Entry Point:
+* main.ts
+
 Components:
 * app
 - app.component.ts
