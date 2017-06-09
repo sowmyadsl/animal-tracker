@@ -11,23 +11,21 @@
         <figcaption>
           {{animal.name}}
         </figcaption>
-        </figure>
-        <div class="animal-info" *ngIf="showInfo">
-          <h4>animal Info:</h4>
-          <p>Name: {{animal.name}}
-          <p>Age: {{animal.age}} years</p>
-          <p>Diet: {{animal.diet}}</p>
-          <p>Location: {{animal.location}}</p>
-          <p>Caretakers: {{animal.caretakers}}</p>
-          <p>Sex: {{animal.sex}}</p>
-          <p>likes: {{animal.likes}}</p>
-          <p>dislikes: {{animal.dislikes}}</p>
+      </figure>
+      <br>
+      
+      <div class="animal-info">
+        <h4>Animal Info:</h4>
+        <p><strong>Name:</strong> {{animal.name}}
+          <p><strong>Age:</strong> {{animal.age}} years</p>
+          <p><strong>Diet:</strong> {{animal.diet}}</p>
+          <p><strong>Location:</strong> {{animal.location}}</p>
+          <p><strong>Caretakers:</strong> {{animal.caretakers}}</p>
+          <p><strong>Sex:</strong> {{animal.sex}}</p>
+          <p><strong>likes:</strong> {{animal.likes}}</p>
+          <p><strong>dislikes:</strong> {{animal.dislikes}}</p>
           <hr>
         </div>
-       </li>
-   </ul>
-</div>
-
-<div class="actions">
-  <button type="button" (click)="showInfo = !showInfo">{{ showInfo ? "Hide Info" : "Show Info"}}</button>
-</div>
+      </li>
+    </ul>
+  </div>

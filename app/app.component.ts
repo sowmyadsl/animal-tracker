@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Animal } from './animal.model';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +9,39 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-animals: Animal[] = [
-    new Animal("Arctic Fox","http://fennecfoxes.webs.com/evde-baykus.jpg","Moon",2,"Carnivore","Northern Trail",5,"Female","Cool shade","Loud Noises"),
-    new Animal("Ocelot", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Ocelot_%28Jaguatirica%29_Zoo_Itatiba.jpg/220px-Ocelot_%28Jaguatirica%29_Zoo_Itatiba.jpg","Prince",4,"Carnivore","Tropical Rain Forest Building",6,"Male","Lying in the sunshine","Toys that are rope based"),
-    new Animal("Northwest Black Tailed Deer","http://www.rsmiller.net/images/BlackTailedDeer.jpg","Tinkerbell",8,"Herbivore","Northern Trail",2,"Female","Delicate roots and leaves","Loud Noises")
+animals: Animal[] = [{
+      species: "Arctic Fox",
+      image:"http://fennecfoxes.webs.com/evde-baykus.jpg",
+      name: "Moon",
+      age: 2,
+      diet: "Carnivore",
+      location: "Northern Trail",
+      caretakers: 5,
+      sex: "Female",
+      likes: "Cool shade",
+      dislikes: "Loud noises"
+    },{
+      species: "Ocelot",
+      image:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Ocelot_%28Jaguatirica%29_Zoo_Itatiba.jpg/220px-Ocelot_%28Jaguatirica%29_Zoo_Itatiba.jpg",
+      name: "Prince",
+      age: 4,
+      diet: "Carnivore",
+      location: "Tropical Rain Forest Building",
+      caretakers: 6,
+      sex: "Male",
+      likes: "Laying in the sunshine",
+      dislikes: "Toys that are not rope-based"
+    },{
+      species: "Northwest Black Tailed Deer",
+      image:"http://www.rsmiller.net/images/BlackTailedDeer.jpg",
+      name: "Tinkerbell",
+      age: 8,
+      diet: "Herbivore",
+      location: "Northern Trail",
+      caretakers: 2,
+      sex: "Female",
+      likes: "Delicate roots and leaves",
+      dislikes: "Loud Noises"
+    }
   ];
-}
-
-class Animal{
-  constructor (public species: string,public image: string, public name: string, public age: number, public diet: string, public location: any, public caretakes: number, public sex: string, public likes: string, public dislikes: string){}
 }
