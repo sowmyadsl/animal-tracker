@@ -6,7 +6,7 @@ import { Animal } from './animal.model';
   templateUrl: './animal-list.component.html',
   styleUrls: ['./animal-list.component.css']
 })
-export class AnimalDetailComponent {
+export class AnimalListComponent {
   @Input() animals: Animal[];
   @Output() editAnimalSender = new EventEmitter;
 

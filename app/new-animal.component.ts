@@ -9,8 +9,9 @@ import { Animal } from './animal.model';
 export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter;
 
-  AddNewAnimal (
+  newAnimal (
     species: string,
+    image: string,
     name: string,
     age: number,
     diet: string,
@@ -20,7 +21,7 @@ export class NewAnimalComponent {
     likes: string,
     dislikes: string
   ){
-    var newAnimal = new Animal(species, name, age, diet, location, caretakers, sex, likes, dislikes);
+    var newAnimal = new Animal(species, image, name, age, diet, location, caretakers, sex, likes, dislikes);
     this.newAnimalSender.emit(newAnimal);
   }
 
