@@ -6,10 +6,10 @@
   <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   <div class="row">
     <div class="col-sm-7">
-      <animal-list [animals]="animalList" (editAnimalSender)="editAnimal($event)">
+      <animal-list [animals]="animals" (editAnimalSender)="editAnimal($event)">
       </animal-list>
     </div>
-    <div class="con-sm-5">
+    <div class="col-sm-5">
       <edit-animal  [selectedAnimal]="selectedAnimal" (finishedEditingSender)="finishedEditing()"></edit-animal>
     </div>
   </div>

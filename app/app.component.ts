@@ -51,6 +51,10 @@ animals: Animal[] = [{
     this.selectedAnimal = animal;
   }
 
+  addAnimal(newAnimal){
+    this.animals.push(newAnimal);
+  }
+
   finishedEditing() {
    this.selectedAnimal = null;
  }
