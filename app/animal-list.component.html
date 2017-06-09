@@ -1,13 +1,27 @@
-<div *ngFor="let animal of animals">
-  <h5 class="text-primary">Species: {{animal.species}}</h5>
-  <p>Name: {{animal.name}}</p>
-  <p>Image: {{animal.image}}</p>
-  <p>Age: {{animal.age}}</p>
-  <p>Diet: {{animal.diet}}</p>
-  <p>Location: {{animal.location}}</p>
-  <p>Caretakers: {{animal.caretakers}}</p>
-  <p>Sex: {{animal.sex}}</p>
-  <p>Likes: {{animal.likes}}</p>
-  <p>Dislikes: {{animal.dislikes}}</p>
-  <button class="btn btn-primary" (click)="editAnimal(animal)">Edit</button>
-</div>
+<div class="col-md-9">
+  <ul>
+    <li *ngFor="let animal of animals">
+      <h3>{{animal.species}}</h3>
+      <figure>
+        <img src="{{animal.image}}" alt="{{animal.name}}">
+        <figcaption>
+          {{animal.name}}
+        </figcaption>
+      </figure>
+      <br>
+      <div class="animal-info">
+        <h4>Animal Info:</h4>
+        <p><strong>Name:</strong> {{animal.name}}
+          <p><strong>Age:</strong> {{animal.age}} years</p>
+          <p><strong>Diet:</strong> {{animal.diet}}</p>
+          <p><strong>Location:</strong> {{animal.location}}</p>
+          <p><strong>Caretakers:</strong> {{animal.caretakers}}</p>
+          <p><strong>Sex:</strong> {{animal.sex}}</p>
+          <p><strong>likes:</strong> {{animal.likes}}</p>
+          <p><strong>dislikes:</strong> {{animal.dislikes}}</p>
+          <hr>
+        </div>
+        <button class="btn btn-primary" (click)="editAnimal(animal)">Edit</button>
+      </li>
+    </ul>
+  </div>

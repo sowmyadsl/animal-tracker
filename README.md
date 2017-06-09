@@ -26,7 +26,8 @@ You will need the following things properly installed on your computer.
 * New animal component to let user fill a form and log a new animal to the app.
 * Edit animal component to let user fill a form and edit a property of animal.
 * Animal-list component displays a list of all animals.
-* Animal model contains the class and properties.
+* Animal model contains the object constructor and properties which will be exported to all other components.
+* age-group.pipe.ts for filtering animal data by age group
 
 4. Components:
 
@@ -50,6 +51,7 @@ Components:
 - animal-list.component.ts
 - animal-list.component.css
 - animal-list.component.html
+- age-group.pipe.ts
 
 Model:
 * animal.model.ts

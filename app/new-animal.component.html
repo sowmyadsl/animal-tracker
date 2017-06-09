@@ -1,37 +1,45 @@
 <!-- New form to add a new animal -->
 
 <h1>New Animal</h1>
-    <div>
-      <br>
+    <div class="form-group">
       <label name="new-species">New species </label>
       <input #newSpecies>
-      <br>
+    </div>
+    <div class="form-group">
       <label name="new-image">New image</label>
       <input #newImage>
-      <br>
+    </div>
+    <div class="form-group">
       <label name="new-name">New name</label>
       <input #newName>
-      <br>
+    </div>
+    <div class="form-group">
       <label name="new-age">New age</label>
       <input #newAge>
-      <br>
+    </div>
+    <div class="form-group">
       <label name="new-diet">New diet</label>
       <input #newDiet>
-      <br>
+    </div>
+    <div class="form-group">
       <label name="new-location">New location</label>
       <input #newLocation>
-      <br>
+    </div>
+    <div class="form-group">
       <label name="new-caretakers">New caretakers</label>
       <input #newCaretakers>
-      <br>
+    </div>
+    <div class="form-group">
       <label name="new-sex">New sex</label>
       <input #newSex>
-      <br>
+    </div>
+      <div class="form-group">
       <label name="new-likes">New likes</label>
       <input #newLikes>
-      <br>
+      </div>
+      <div class="form-group">
       <label name="new-dislikes">New dislikes</label>
       <input #newDislikes>
+      </div>
       <br>
       <button (click)="newAnimal(newSpecies.value, newImage.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value)">Add!</button>
-    </div>
