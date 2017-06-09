@@ -1,6 +1,19 @@
+<h2>Animal List</h2>
+<select (change)="onChange($event.target.value)" >
+      <option value="allAges">All animals</option>
+      <option value="young">Young Animals</option>
+      <option value="mature" selected="selected">Mature animals</option>
+    </select>
+
+    <select (change)="onChange1($event.target.value)" >
+          <option value="allDiets">All animals </option>
+          <option value="omnivore">Omnivore</option>
+          <option value="herbivore">herbivore</option>
+          <option value="carnivore" selected="selected">carnivore</option>
+    </select>
 <div class="col-md-9">
   <ul>
-    <li *ngFor="let animal of animals">
+    <li *ngFor="let animal of animals | ageGroup:filterByageGroup | dietType: filterBydietType">
       <h3>{{animal.species}}</h3>
       <figure>
         <img src="{{animal.image}}" alt="{{animal.name}}">

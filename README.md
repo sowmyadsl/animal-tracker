@@ -18,6 +18,7 @@ You will need the following things properly installed on your computer.
 | User can click on a drop down to search by a filter only young animals(less than 2 years of age) will be displayed| User can click on young animals from the menu | A list of only young animals will be displayed|
 | User can click on a drop down to search by a filter only mature animals (less than 2 years of age) will be displayed| User can click on mature animals from the menu | A list of only mature animals will be displayed|
 | User can edit a animals's properties | User can click on each animal to edit its name, age or caretakers | It edits the properties and displays|
+| Users can filter data by diet | Users click on herbivore from menu | Only herbivore diet type animals are listed below|
 
 
 3. Integration
@@ -28,6 +29,7 @@ You will need the following things properly installed on your computer.
 * Animal-list component displays a list of all animals.
 * Animal model contains the object constructor and properties which will be exported to all other components.
 * age-group.pipe.ts for filtering animal data by age group
+* diet-type.pipe.ts for filtering animal data by diet.
 
 4. Components:
 
@@ -52,6 +54,7 @@ Components:
 - animal-list.component.css
 - animal-list.component.html
 - age-group.pipe.ts
+- diet-type.pipe.ts
 
 Model:
 * animal.model.ts

@@ -10,9 +10,19 @@ import { Animal } from './animal.model';
 export class AnimalListComponent {
   @Input() animals: Animal[];
   @Output() editAnimalSender = new EventEmitter;
+  filterByageGroup: string = "allAges";
+  filterBydietType: string = "allDiets";
 
 // edits the properties of animal
   editAnimal(animal){
     this.editAnimalSender.emit(animal);
+  }
+
+  onChange(optionFromMenu) {
+  this.filterBydietType = optionFromMenu;
+  }
+
+  onChange1(optionFromMenu) {
+    this.filterByageGroup = optionFromMenu;
   }
 }
