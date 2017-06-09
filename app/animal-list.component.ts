@@ -19,10 +19,10 @@ export class AnimalListComponent {
   }
 
   onChange(optionFromMenu) {
-  this.filterBydietType = optionFromMenu;
+    this.filterByageGroup = optionFromMenu;
   }
 
   onChange1(optionFromMenu) {
-    this.filterByageGroup = optionFromMenu;
+  this.filterBydietType = optionFromMenu;
   }
 }
