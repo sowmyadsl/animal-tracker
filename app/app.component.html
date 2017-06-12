@@ -2,15 +2,8 @@
   <h1> Animal Tracker </h1>
 </div>
 
-<div class="container">
-  <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
-  <div class="row">
-    <div class="col-sm-7">
-      <animal-list [animals]="animals" (editAnimalSender)="editAnimal($event)">
-      </animal-list>
-    </div>
-    <div class="col-sm-5">
-      <edit-animal  [selectedAnimal]="selectedAnimal" (finishedEditingSender)="finishedEditing()"></edit-animal>
-    </div>
+  <div class="container">
+    <animal-list [animals]="animals"(editAnimalSender)="editAnimal($event)"></animal-list>
+    <edit-animal  [selectedAnimal]="selectedAnimal" (finishedEditingSender)="finishedEditing()"></edit-animal>
+    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   </div>
-</div>
