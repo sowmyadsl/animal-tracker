@@ -1,36 +1,38 @@
 <h2>Animal List</h2>
-<div class="row">
-  <div class="col-md-5">
-    <p> <strong>Search by Age group</strong> </p>
-    <select (change)="onChange($event.target.value)">
-      <option value="allAges">All animals</option>
-      <option value="young">Young Animals</option>
-      <option value="mature">Mature animals</option>
-    </select>
+<!-- filter by age group select options -->
+  <div class="row">
+    <div class="col-md-5">
+      <p> <strong>Search by Age group</strong> </p>
+      <select (change)="onChange($event.target.value)">
+        <option value="allAges">All animals</option>
+        <option value="young">Young Animals</option>
+        <option value="mature">Mature animals</option>
+      </select>
+    </div>
+    <!-- filter by diet select options -->
+    <div id="diet-bar "class="col-md-6">
+      <p> <strong>Search by Diet </strong> </p>
+      <select (change)="onChange1($event.target.value)">
+        <option value="allDiets">All animals </option>
+        <option value="omnivore">Omnivore</option>
+        <option value="herbivore">herbivore</option>
+        <option value="carnivore">carnivore</option>
+      </select>
+    </div>
   </div>
-  <div id="diet-bar "class="col-md-6">
-    <p> <strong>Search by Diet </strong> </p>
-    <select (change)="onChange1($event.target.value)">
-      <option value="allDiets">All animals </option>
-      <option value="omnivore">Omnivore</option>
-      <option value="herbivore">herbivore</option>
-      <option value="carnivore">carnivore</option>
-    </select>
-  </div>
-</div>
 
 
-    <ul>
-      <li *ngFor="let animal of animals | ageGroup:filterByageGroup | dietType: filterBydietType">
-        <h3>{{animal.species}}</h3>
-        <figure>
-          <img src="{{animal.image}}" alt="{{animal.name}}">
-          <figcaption>
-            {{animal.name}}
-          </figcaption>
-        </figure>
-
-  <div class="animal-info">
+<ul>
+  <li *ngFor="let animal of animals | ageGroup:filterByageGroup | dietType: filterBydietType">
+    <h3>{{animal.species}}</h3>
+    <figure>
+      <img src="{{animal.image}}" alt="{{animal.name}}">
+      <figcaption>
+        {{animal.name}}
+      </figcaption>
+    </figure>
+  <!-- lists the animal info -->
+    <div class="animal-info">
       <h4>Animal Info:</h4>
       <p><strong>Name:</strong> {{animal.name}}
         <p><strong>Age:</strong> {{animal.age}} years</p>

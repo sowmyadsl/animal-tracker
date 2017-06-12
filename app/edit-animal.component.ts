@@ -14,5 +14,4 @@ export class EditAnimalComponent {
   finishedEditing() {
     this.finishedEditingSender.emit()
   }
-
 }
