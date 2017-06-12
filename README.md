@@ -1,7 +1,11 @@
 ## Animal Tracker
 
-This app can be used to track and keep a log of animals for a local zoo.
+This app can be used to track and keep a log of animals in a local zoo.
 
+##Screenshots:
+
+![](https://github.com/sowmyadsl/animal-tracker/blob/master/resources/images/Screen%20Shot%202017-06-11%20at%2011.12.25%20PM.png)
+![](https://github.com/sowmyadsl/animal-tracker/blob/master/resources/images/Screen%20Shot%202017-06-11%20at%2011.13.30%20PM.png)
 
 ## Planning
 
@@ -79,7 +83,7 @@ Model:
 * `npm install`
 * `bower install`
 * `gulp build`
-* `gulp serve`
+* `gulp serve`ß
 
 ## Running / Development
 
