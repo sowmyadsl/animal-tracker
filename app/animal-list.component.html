@@ -1,14 +1,16 @@
 <h2>Animal List</h2>
 <div class="row">
-  <div class="col-md-6">
-    <select (change)="onChange($event.target.value)" >
+  <div class="col-md-5">
+    <p> <strong>Search by Age group</strong> </p>
+    <select (change)="onChange($event.target.value)">
       <option value="allAges">All animals</option>
       <option value="young">Young Animals</option>
       <option value="mature">Mature animals</option>
     </select>
-  <div>
-  <div class="col-md-6">
-    <select (change)="onChange1($event.target.value)" >
+  </div>
+  <div id="diet-bar "class="col-md-6">
+    <p> <strong>Search by Diet </strong> </p>
+    <select (change)="onChange1($event.target.value)">
       <option value="allDiets">All animals </option>
       <option value="omnivore">Omnivore</option>
       <option value="herbivore">herbivore</option>
@@ -17,8 +19,7 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-sm-5">
+
     <ul>
       <li *ngFor="let animal of animals | ageGroup:filterByageGroup | dietType: filterBydietType">
         <h3>{{animal.species}}</h3>
@@ -28,21 +29,19 @@
             {{animal.name}}
           </figcaption>
         </figure>
-        <br>
-        <div class="animal-info">
-          <h4>Animal Info:</h4>
-          <p><strong>Name:</strong> {{animal.name}}
-            <p><strong>Age:</strong> {{animal.age}} years</p>
-            <p><strong>Diet:</strong> {{animal.diet}}</p>
-            <p><strong>Location:</strong> {{animal.location}}</p>
-            <p><strong>Caretakers:</strong> {{animal.caretakers}}</p>
-            <p><strong>Sex:</strong> {{animal.sex}}</p>
-            <p><strong>likes:</strong> {{animal.likes}}</p>
-            <p><strong>dislikes:</strong> {{animal.dislikes}}</p>
-            <hr>
-          </div>
-          <button class="btn btn-primary" (click)="editAnimal(animal)">Edit</button>
-        </li>
-      </ul>
-    </div>
-</div>
+
+  <div class="animal-info">
+      <h4>Animal Info:</h4>
+      <p><strong>Name:</strong> {{animal.name}}
+        <p><strong>Age:</strong> {{animal.age}} years</p>
+        <p><strong>Diet:</strong> {{animal.diet}}</p>
+        <p><strong>Location:</strong> {{animal.location}}</p>
+        <p><strong>Caretakers:</strong> {{animal.caretakers}}</p>
+        <p><strong>Sex:</strong> {{animal.sex}}</p>
+        <p><strong>likes:</strong> {{animal.likes}}</p>
+        <p><strong>dislikes:</strong> {{animal.dislikes}}</p>
+        <hr>
+      </div>
+      <button class="btn btn-primary" (click)="editAnimal(animal)">Edit</button>
+    </li>
+  </ul>

@@ -1,3 +1,8 @@
+## Animal Tracker
+
+This app can be used to track and keep a log of animals for a local zoo.
+
+
 ## Planning
 
 1. Configuration/dependencies:
@@ -80,3 +85,7 @@ Model:
 
 * `gulp serve`
 * Visit app at [http://localhost:3000](http://localhost:3000).
+
+## Copyright
+
+By Sowmya Dinavahi **2017**
